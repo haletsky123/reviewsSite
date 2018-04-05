@@ -1,0 +1,11 @@
+
+{% if latest_review_list %}
+    <ul>
+    {% for review in latest_review_list %}
+        <a>{{ review.author }}</a>
+        <li><a href="/reviews/{{ review.id }}/">{{ review.text_before }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No review are available.</p>
+{% endif %}
